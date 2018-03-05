@@ -2,10 +2,10 @@ class CreateTasks < ActiveRecord::Migration[5.1]
   def change
     create_table :tasks do |t|
       t.string :name
-      t.int :priority
+      t.integer :priority
       t.string :difficulty
       t.string :description
-      t.int :est_time
+      t.integer :est_time
       t.string :req_tools
       t.string :notes
       t.boolean :completed
