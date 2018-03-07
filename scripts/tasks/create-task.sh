@@ -9,7 +9,8 @@ curl "http://localhost:4741/tasks" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "task": {
-      "name": "'"${NAME}"'"
+      "name": "'"${NAME}"'",
+      "room_id": "'"${ROOMID}"'"
     }
   }'
 
