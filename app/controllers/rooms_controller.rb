@@ -1,9 +1,9 @@
-class RoomsController < ApplicationController
+class RoomsController < ProtectedController
   before_action :set_room, only: [:show, :update, :destroy]
 
   # GET /rooms
   def index
-    @rooms = Room.all
+    @rooms = current_user.rooms.all
 
     render json: @rooms
   end
@@ -15,7 +15,7 @@ class RoomsController < ApplicationController
 
   # POST /rooms
   def create
-    @room = Room.new(room_params)
+    @room = current_user.rooms.build(room_params)
 
     if @room.save
       render json: @room, status: :created, location: @room
@@ -41,7 +41,7 @@ class RoomsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_room
-      @room = Room.find(params[:id])
+      @room = current_user.rooms.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

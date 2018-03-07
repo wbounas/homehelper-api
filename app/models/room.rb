@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
-  belongs_to :tasks
+  has_many :tasks
   belongs_to :user
+  validates :name, :user, presence: true
 end
