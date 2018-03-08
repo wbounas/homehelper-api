@@ -10,7 +10,7 @@ curl "http://localhost:4741/tasks" \
   --data '{
     "task": {
       "name": "'"${NAME}"'",
-      "room_id": "'"${ROOMID}"'"
+      "room_id": "'"${ROOM}"'"
     }
   }'
 
