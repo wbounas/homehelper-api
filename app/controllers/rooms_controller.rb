@@ -1,4 +1,4 @@
-class RoomsController < OpenReadController
+class RoomsController < ProtectedController
   before_action :set_room, only: [:show, :update, :destroy]
 
   # GET /rooms
