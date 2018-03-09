@@ -55,4 +55,4 @@ This was a great learning experience for me, but ultimately the app at this stag
 
 ## Entity Relationship Diagram
 
-![ERD](planning/hh-erd.jpg)
+![ERD](planning/erd-v1.png)
